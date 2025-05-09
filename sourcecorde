@@ -12,8 +12,12 @@ int main(void) {
 	//min: 探索する範囲の最小値
 	//max: 探索する範囲の最大値
 	//ans: 答えを格納する配列。長さは想定する解の最大個数+1
-	double xm, min = 0, max = 15;
+	double xm, min, max;
 	double ans[11];
+	//他の範囲にも対応させるため、scanを使用。
+	//スペース区切りのdoubleで入力。
+	printf("探索範囲を入力してください。\n最小値 最大値:");
+	scanf_s("%lf %lf", &min, &max);
 	//後にあるi-1処理のために、0番目はminの値に。
 	ans[0] = min;
 	//for文および答えの呼び出しのためにiを定義。想定する解の個数だけループさせる
@@ -41,7 +45,7 @@ int main(void) {
 			(func(x1) * func(xm) < 0) ? (x2 = xm) : (x1 = xm);
 			//f(xm)が十分に小さく、なおかつmax以下のとき、そのxmをf(xm)=0を満たすものとして答えとして保存する。
 			//nに関するループを強制終了する。
-			if ((fabs(func(xm)) < 0.001) && (xm <=max)) {
+			if ((fabs(func(xm)) < 0.0001) && (xm <=max)) {
 				ans[i] = xm;
 				break;
 			}
