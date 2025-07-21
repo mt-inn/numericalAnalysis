@@ -4,7 +4,7 @@
 
 void main(void)
 {
-    /* 
+    /*
     変数を定義
     a: 入力する行列
     inv: 逆行列になる場所
@@ -12,7 +12,7 @@ void main(void)
     i,j,k,l,n: 繰り返し処理のカウンター。可読性のために別々に用意
     */
     double a[10][10], inv[10][10], p, aik;
-    int i=0, j, k, l, n;
+    int i = 0, j, k, l, n;
     printf("元数を入力:\n");
     scanf("%d", &n);
     printf("定数を入力:\n");
@@ -22,7 +22,7 @@ void main(void)
       | 1 2 3 |
       | 4 5 6 |
       | 7 8 9 |
-    
+
     */
     for (i = 0;i < n;i++) {
         for (j = 0;j < n;j++) {
@@ -37,8 +37,9 @@ void main(void)
     printf("入力された行列:\n");
     for (i = 0;i < n;i++) {
         for (j = 0;j < n;j++) {
-            printf("%lf  ", a[i][j]);
+            printf("  |  %lf", a[i][j]);
         }
+        printf("  |");
         printf("\n");
     }
     printf("\n");
