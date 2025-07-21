@@ -36,11 +36,11 @@ void main(void)
     //入力した行列を表示
     printf("入力された行列:\n");
     for (i = 0;i < n;i++) {
-        for (j = 0;j < n;j++) {
-            printf("  |  %lf", a[i][j]);
-        }
         printf("  |");
-        printf("\n");
+        for (j = 0;j < n;j++) {
+            printf("  %lf", a[i][j]);
+        }
+        printf("  |\n");
     }
     printf("\n");
     for (k = 0;k < n;k++) {
