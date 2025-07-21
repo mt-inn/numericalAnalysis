@@ -12,7 +12,7 @@ void main(void)
     i,j,k,l,n: 繰り返し処理のカウンター。可読性のために別々に用意
     */
     double a[10][10], inv[10][10], p, aik;
-    int i=0;, j, k, l, n;
+    int i=0, j, k, l, n;
     printf("元数を入力:\n");
     scanf("%d", &n);
     printf("定数を入力:\n");
